@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='nuchabal',
     version='0',
-    packages=find_packages('./nuchabäl'),
+    packages=find_packages(),
     url='',
     download_url='https://github.com/julienmalard/nuchabal',
     license='GNU GPL 3',
