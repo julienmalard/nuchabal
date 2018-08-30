@@ -9,5 +9,8 @@ setup(
     license='GNU GPL 3',
     author='Julien Jean Malard',
     author_email='julien.malard@mail.mcgill.ca',
-    description='Kinuk\' ri taq chab\'äl pa ri xekaj wachulew'
+    description='Kinuk\' ri taq chab\'äl pa ri xekaj wachulew',
+    package_data={
+        '': ['*.json'],
+    }
 )
