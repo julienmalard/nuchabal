@@ -11,6 +11,6 @@ setup(
     author_email='julien.malard@mail.mcgill.ca',
     description='Kinuk\' ri taq chab\'äl pa ri xekaj wachulew',
     package_data={
-        '': ['*.json'],
+        '': ['*.json', '*.txt'],
     }
 )
