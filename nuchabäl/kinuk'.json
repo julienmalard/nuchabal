@@ -1,11 +1,11 @@
 {
-  "Français": {
+  "français": {
     "runuk'": "fr",
     "rumajaju": "fr",
     "glottolog": "stan1290",
     "ajilanïk": "latin"
   },
-  "Español": {
+  "español": {
     "runuk'": "es",
     "rumajaju": "fr",
     "glottolog": "stan1288",
@@ -61,6 +61,12 @@
     "glottolog": "mara1378",
     "rumajaju": "mr",
     "ajilanïk": "देव"
+  },
+  "മലയാളം": {
+    "runuk'": "മ",
+    "glottolog": "mala1464",
+    "rumajaju": "ml",
+    "ajilanïk": "മലയാളം"
   },
   "नेपाली": {
     "runuk'": "ने",
