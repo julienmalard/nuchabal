@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "module": "commonjs",
+      "strict": true,
+      "declaration": true,
+      "resolveJsonModule": true,
+      "outDir": "./dist_npm"
+    },
+    "include": ["src/**/*.json"],
+    "exclude": [
+        "rutojtobenïk",
+        "dist_npm",
+        "dist",
+        "node_modules"
+    ]
+  }

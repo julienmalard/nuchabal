@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='nuchabal',
-    version='0',
+    version='0.0.1',
     packages=find_packages(),
     url='',
     download_url='https://github.com/julienmalard/nuchabal',
