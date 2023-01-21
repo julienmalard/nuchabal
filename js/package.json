@@ -1,8 +1,8 @@
 {
   "name": "nuchabal",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "",
-  "main": "dist_npm/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "copierDonnées": "cp -R ../retamabäl ruxeel",
     "nettoyer": "rimraf dist",
