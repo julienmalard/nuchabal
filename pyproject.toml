@@ -1,14 +1,19 @@
 [tool.poetry]
 name = "nuchabal"
 version = "0.1.0"
-description = ""
-authors = ["julienmalard <julien.malard@mail.mcgill.ca>"]
+description = "Kinuk\\' ri taq chab\\'äl pa ri xekaj wachulew"
+authors = ["Julien Malard-Adam <julien.malard@mail.mcgill.ca>"]
+license = "AGPL-3.0"
+readme = "README.md"
+packages = [{include = "nuchabäl", from = "python/ruxeel"}]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.9"
+constellationpy = {version = "^0.2.0", optional = true}
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.extras]
+constellation = ["constellationpy"]
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

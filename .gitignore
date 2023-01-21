@@ -164,3 +164,7 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+# JS
+js/dist
+node_modules
+js/ruxeel/retamabäl
