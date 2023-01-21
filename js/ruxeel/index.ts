@@ -2,14 +2,15 @@ import type {
     RubanikilEtamabälChabäl,
     RubanikilEtamabälTzibanem,
 } from "@/rubanikil.js";
+export { version as relesaxïk } from "@/relesaxïk.js"
 import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json"
 import _retamabälTzibanem from "@/retamabäl/tz'ib'.json"
 
-const retamabälChabäl: {
+export const retamabälChabäl: {
     [ch: string]: RubanikilEtamabälChabäl
 } = _retamabälChabäl
 
-const retamabälTzibanem: {
+export const retamabälTzibanem: {
     [tz: string]: RubanikilEtamabälTzibanem
 } = _retamabälTzibanem
 
