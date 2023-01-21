@@ -164,6 +164,8 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+.DS_Store
+
 # JS
 js/dist
 node_modules
