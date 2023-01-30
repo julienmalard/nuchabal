@@ -10,3 +10,11 @@ export type RubanikilEtamabälTzibanem = {
   ch: string;
   aj: string;
 };
+
+export type RubanikilKetamabälTaqChabäl = {
+  [ch: string]: RubanikilEtamabälChabäl;
+};
+
+export type RubanikilKetamabälTaqTzibanem = {
+  [tz: string]: RubanikilEtamabälTzibanem;
+};

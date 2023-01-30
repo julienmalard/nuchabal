@@ -25,15 +25,17 @@ import {
   runukRucheelRunukTzib,
   runukRucheelRajilanïkTzib,
   runukRucheelRubiTzib,
-  runukRucheelRuchojmilalTzib,
+  runukRucheelRucholanemTzib,
   runukRujalojRunukTzib,
   runukRujalojRajilanïkTzib,
   runukRujalojRubiTzib,
-  runukRujalojRuchojmilalTzib,
+  runukRujalojRucholanemTzib,
+  retalTzibNuchabäl,
 } from "@/jantape.js";
 
 const RubanikilRuxeelTzij: bds.schémaSpécificationBd = {
   licence: "ODbl-1_0",
+  motsClefs: [retalTzibNuchabäl],
   tableaux: [
     {
       cols: [
@@ -89,8 +91,8 @@ const RubanikilRuxeelTzij: bds.schémaSpécificationBd = {
           idVariable: runukRujalojRubiTzib,
         },
         {
-          idColonne: runukRucheelRuchojmilalTzib,
-          idVariable: runukRujalojRuchojmilalTzib,
+          idColonne: runukRucheelRucholanemTzib,
+          idVariable: runukRujalojRucholanemTzib,
         },
       ],
       clef: jaqbälKikajtzïkTzibanem,
@@ -103,13 +105,17 @@ export type RucholajEtamabälChabäl = {
   [runukRucheelRajilanïkChabäl]: string;
   [runukRucheelRubiChabäl]: string;
   [runukRucheelRutzibanemChabäl]: string;
+  [runukRucheelRunukGlChabäl]?: string;
+  [runukRucheelRunukI1Chabäl]?: string;
+  [runukRucheelRunukI2Chabäl]?: string;
+  [runukRucheelRunukI3Chabäl]?: string;
 };
 
 export type RucholajEtamabälTzibanem = {
   [runukRucheelRunukTzib]: string;
   [runukRucheelRajilanïkTzib]: string;
   [runukRucheelRubiTzib]: string;
-  [runukRucheelRuchojmilalTzib]: string;
+  [runukRucheelRucholanemTzib]: string;
 };
 
 export type KelChumilChabäl = கிளி<RucholajEtamabälChabäl>;
