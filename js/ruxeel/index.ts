@@ -5,13 +5,12 @@ import type {
 } from "@/rubanikil.js";
 import type { KelChumilChabäl, KelChumilTzibanem } from "@/kel.js";
 
-import test from "@/retamabäl/தகவல்கள்.json" 
-import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json";
-import _retamabälTzibanem from "@/retamabäl/tz'ib'.json";
+import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json" assert {type:"json"};
+import _retamabälTzibanem from "@/retamabäl/tzib'.json" assert {type:"json"};
 import { tachojmisajKel } from "@/kel.js";
 
 export { version as relesaxïk } from "@/relesaxïk.js";
-export {test};
+
 export class Nuchabäl {
   retamabälChabälChumil: {
     [ch: string]: RubanikilEtamabälChabäl;
