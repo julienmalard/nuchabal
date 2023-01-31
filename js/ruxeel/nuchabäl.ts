@@ -168,6 +168,7 @@ export class Nuchabäl {
 
   tatzeqelbej(sm: () => void): () => void {
     this.événements.on("xujalRi'", sm);
+    sm();
     return () => {
       this.événements.off("xujalRi'", sm);
     };
