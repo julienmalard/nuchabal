@@ -6,7 +6,10 @@ describe("Retalil etamab'äl ch'ab'äl", (): void => {
   let nuchabäl: Nuchabäl;
   beforeAll(() => {
     nuchabäl = new Nuchabäl({});
-    console.log({ relesaxïk });
+  });
+
+  test("Relesaxïk", ()=>{
+    expect(typeof relesaxïk).toEqual("string");
   });
 
   test("Man npet ta jun runuk' ka'i' b'i'aj", (): void => {
@@ -145,6 +148,16 @@ describe("Kitz'b'anem ch'ab'äl", (): void => {
     expect(
       kitzib_chabal.map((x) => kinuk_tzib.includes(x)).every((x) => x)
     ).toEqual(true);
+  });
+  test("Kitzib' kichin tz'ib'anem", (): void => {
+    const kinuk_tzib = [...Object.keys(nuchabäl.retamabälTzibanem)];
+    for (const runuk of kinuk_tzib) {
+      const rutzib = new RegExp(`[${nuchabäl.rutzibTzibanem({runuk})}]+`, "g")
+      const rubi = nuchabäl.rubiTzibanem({runuk})
+      console.log({rutzib,
+        rubi})
+      expect(rubi.match(rutzib).join("")).toEqual(rubi);
+    }
   });
   test("Rub'i' tz'ib'anem", (): void => {
     const rubi: string = nuchabäl.rubiTzibanem({runuk: "த"});

@@ -9,6 +9,7 @@ export type RubanikilEtamabälTzibanem = {
   "rb'": string;
   ch: string;
   aj: string;
+  tz: string;
 };
 
 export type RubanikilKetamabälTaqChabäl = {

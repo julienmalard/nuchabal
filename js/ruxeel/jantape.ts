@@ -39,6 +39,7 @@ export const runukRucheelRunukTzib = "runukTzib";
 export const runukRucheelRajilanïkTzib = "rajilanïkTzib";
 export const runukRucheelRubiTzib = "rubiTzib";
 export const runukRucheelRucholanemTzib = "rucholanemTzib";
+export const runukRucheelRutzibTzib = "rutzibTzib";
 
 export const runukRujalojRunukTzib =
   "/orbitdb/zdpuB1o5fEEZFicWiQTL7RE8xv7v7X2SS5A7tNUAXaHQ9c58P/5e71fe3b-3eb9-4574-b2b5-d8d9f3f82a63";
@@ -48,3 +49,5 @@ export const runukRujalojRubiTzib =
   "/orbitdb/zdpuApC8sYxrezNAdgNFcLDcrEZhzMi7pv5A7VMZrCCiv2rb6/e45c68b2-2387-4092-b6be-3c50b3a5e884";
 export const runukRujalojRucholanemTzib =
   "/orbitdb/zdpuB14vFuP6aHNaXxoeWZvq1NRyx6HCUReoT4sxSk3kAFdZe/026952f2-38f5-4d18-95ca-d99114e2cc1e";
+export const runukRujalojRutzibTzib =
+  "/orbitdb/zdpuAnXpasEMduNSXHxaeyGdZGmyU4NEwA3SEydj7jCDCY3Kz/3212b086-1480-4c9a-aa0e-0b5e98247ce4";

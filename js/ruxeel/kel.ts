@@ -26,10 +26,12 @@ import {
   runukRucheelRajilanïkTzib,
   runukRucheelRubiTzib,
   runukRucheelRucholanemTzib,
+  runukRucheelRutzibTzib,
   runukRujalojRunukTzib,
   runukRujalojRajilanïkTzib,
   runukRujalojRubiTzib,
   runukRujalojRucholanemTzib,
+  runukRujalojRutzibTzib,
   retalTzibNuchabäl,
 } from "@/jantape.js";
 
@@ -94,6 +96,10 @@ const RubanikilRuxeelTzij: bds.schémaSpécificationBd = {
           idColonne: runukRucheelRucholanemTzib,
           idVariable: runukRujalojRucholanemTzib,
         },
+        {
+          idColonne: runukRucheelRutzibTzib,
+          idVariable: runukRujalojRutzibTzib,
+        },
       ],
       clef: jaqbälKikajtzïkTzibanem,
     },
@@ -116,6 +122,7 @@ export type RucholajEtamabälTzibanem = {
   [runukRucheelRajilanïkTzib]: string;
   [runukRucheelRubiTzib]: string;
   [runukRucheelRucholanemTzib]: string;
+  [runukRucheelRutzibTzib]: string;
 };
 
 export type KelChumilChabäl = கிளி<RucholajEtamabälChabäl>;

@@ -22,6 +22,7 @@ import {
   runukRucheelRunukTzib,
   runukRucheelRajilanïkTzib,
   runukRucheelRucholanemTzib,
+  runukRucheelRutzibTzib,
 } from "@/jantape.js";
 
 import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json" assert { type: "json" };
@@ -29,7 +30,7 @@ import _retamabälTzibanem from "@/retamabäl/tzib'.json" assert { type: "json" 
 import {
   schémaFonctionOublier,
   schémaFonctionSuivi,
-} from "@constl/ipa/dist/utils";
+} from "@constl/ipa/dist/src/utils";
 
 export class Nuchabäl {
   retamabälChabälChumil: RubanikilKetamabälTaqChabäl;
@@ -159,6 +160,11 @@ export class Nuchabäl {
   rucholanemTzibanem({ runuk }: { runuk: string }): string | undefined {
     const rtmbl = this.retamabälTzibanem[runuk];
     return rtmbl?.ch;
+  }
+
+  rutzibTzibanem({ runuk }: { runuk: string }): string | undefined {
+    const rtmbl = this.retamabälTzibanem[runuk];
+    return rtmbl?.tz;
   }
 
   rajilanïkTzibanem({ runuk }: { runuk: string }): string | undefined {
@@ -322,6 +328,7 @@ const tajalPaRubanikilRetamabalTzibanem = (
       aj: r.données[runukRucheelRajilanïkTzib],
       "rb'": r.données[runukRucheelRubiTzib],
       ch: r.données[runukRucheelRucholanemTzib],
+      tz: r.données[runukRucheelRutzibTzib],
     };
   }
 
