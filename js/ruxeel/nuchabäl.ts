@@ -142,7 +142,17 @@ export class Nuchabäl {
 
   rutzibChabäl({ runuk }: { runuk: string }): string | undefined {
     const rtmbl = this.retamabälChabäl[runuk];
-    return rtmbl?.tz;
+    const tzib = rtmbl?.tz;
+    
+    if (tzib) return tzib;
+
+    for (const tz in this.konojelTzibanem) {
+      const rutzibTzibanem = this.rutzibTzibanem({runuk: tz})
+      if (rutzibTzibanem && runuk.match(new RegExp(rutzibTzibanem, "g"))) {
+        return tz
+      }
+    }
+    return undefined;
   }
 
   rajilanïkChabäl({ runuk }: { runuk: string }): string | undefined {
@@ -155,6 +165,12 @@ export class Nuchabäl {
   rubiTzibanem({ runuk }: { runuk: string }): string | undefined {
     const rtmbl = this.retamabälTzibanem[runuk];
     return rtmbl ? rtmbl["rb'"] : undefined;
+  }
+
+  runukTzibanem({ tzibanem }: { tzibanem: string}): string | undefined {
+    return Object.keys(this.retamabälTzibanem).find(
+      (x) => this.retamabälChabäl[x]["rb'"] === tzibanem
+    );
   }
 
   rucholanemTzibanem({ runuk }: { runuk: string }): string | undefined {
@@ -258,6 +274,15 @@ export class Nuchabäl {
     sm: schémaFonctionSuivi<string | undefined>;
   }): () => void {
     return this.tatzeqelbej(() => sm(this.rubiTzibanem({ runuk })));
+  }
+  tatzeqelbejRunukTzibanem({
+    sm,
+    tzibanem,
+  }: {
+    tzibanem: string;
+    sm: schémaFonctionSuivi<string | undefined>;
+  }): () => void {
+    return this.tatzeqelbej(() => sm(this.runukTzibanem({ tzibanem })));
   }
   tatzeqelbejRucholanemTzibanem({
     sm,
