@@ -149,13 +149,16 @@ describe("Kitz'b'anem ch'ab'äl", (): void => {
       kitzib_chabal.map((x) => kinuk_tzib.includes(x)).every((x) => x)
     ).toEqual(true);
   });
-  test("Kitzib' kichin tz'ib'anem", (): void => {
+  test("Kitzib' kichin tz'ib'anem", function () {
     const kinuk_tzib = [...Object.keys(nuchabäl.retamabälTzibanem)];
     for (const runuk of kinuk_tzib) {
-      const rutzib = new RegExp(`[${nuchabäl.rutzibTzibanem({runuk})}]+`, "g")
+      const x = nuchabäl.rutzibTzibanem({runuk})
+      if (!x) continue;
+      const rutzib = new RegExp(x, "g")
       const rubi = nuchabäl.rubiTzibanem({runuk})
       console.log({rutzib,
-        rubi})
+        rubi,
+      match: rubi.match(rutzib)})
       expect(rubi.match(rutzib).join("")).toEqual(rubi);
     }
   });
