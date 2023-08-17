@@ -1,7 +1,6 @@
 export const jaqbälKikajtzïkChabäl = "chab'äl";
 export const jaqbälKikajtzïkTzibanem = "tzib'anem";
 
-export const runukRuxeelTzij = "";
 export const runukMolajKel = "";
 
 export const retalTzibNuchabäl =

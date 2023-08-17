@@ -2,7 +2,7 @@ export type RubanikilEtamabälChabäl = {
   "rb'": string;
   tz?: string;
   aj?: string;
-  rn: { [x: string]: string };
+  rn: { [x: string]: string | undefined };
 };
 
 export type RubanikilEtamabälTzibanem = {

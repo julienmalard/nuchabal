@@ -1,10 +1,9 @@
-import ClientConstellation, { bds } from "@constl/ipa/";
+import { bds, type générerClient } from "@constl/ipa/";
 import { கிளி } from "@lassi-js/kili";
 
 import {
   jaqbälKikajtzïkChabäl,
   jaqbälKikajtzïkTzibanem,
-  runukRuxeelTzij,
   runukMolajKel,
   runukRucheelRunukChabäl,
   runukRucheelRajilanïkChabäl,
@@ -131,29 +130,23 @@ export type KelChumilTzibanem = கிளி<RucholajEtamabälTzibanem>;
 export const tachojmisajKel = ({
   chumil,
 }: {
-  chumil: ClientConstellation;
+  chumil: ReturnType<typeof générerClient>;
 }): {
   kelChabäl: KelChumilChabäl;
   kelTzibanem: KelChumilTzibanem;
 } => {
   const kelChabäl = new கிளி<RucholajEtamabälChabäl>({
     விண்மீன்: chumil,
-    மாறிலிகள்: {
-      அட்டவணை_சாபி: jaqbälKikajtzïkChabäl,
-      வார்ப்புரு: RubanikilRuxeelTzij,
-      தரவுத்தள_அடையாளம்: runukRuxeelTzij,
-      குழு_அடையாளம்: runukMolajKel,
-    },
+    அட்டவணை_சாபி: jaqbälKikajtzïkChabäl,
+    வார்ப்புரு: RubanikilRuxeelTzij,
+    குழு_அடையாளம்: runukMolajKel,
   });
 
   const kelTzibanem = new கிளி<RucholajEtamabälTzibanem>({
     விண்மீன்: chumil,
-    மாறிலிகள்: {
-      அட்டவணை_சாபி: jaqbälKikajtzïkTzibanem,
-      வார்ப்புரு: RubanikilRuxeelTzij,
-      தரவுத்தள_அடையாளம்: runukRuxeelTzij,
-      குழு_அடையாளம்: runukMolajKel,
-    },
+    அட்டவணை_சாபி: jaqbälKikajtzïkTzibanem,
+    வார்ப்புரு: RubanikilRuxeelTzij,
+    குழு_அடையாளம்: runukMolajKel,
   });
 
   return {
