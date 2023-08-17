@@ -11,7 +11,7 @@
     "test": "pnpm copierDonnées && node --no-warnings --experimental-vm-modules ./node_modules/jest/bin/jest.js --runInBand",
     "couverture": "pnpm test -- --coverage",
     "formatter": "pnpm prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\" && pnpm eslint --ext .js,.ts ruxeel",
-    "publier": "pnpm compiler && (git commit -a -m 'version' || true) && pnpm publish",
+    "publier": "pnpm test && (git commit -a -m 'version' || true) && pnpm publish",
     "versioner": "pnpm genversion  --es6 --semi ruxeel/relesaxïk.ts"
   },
   "repository": {
