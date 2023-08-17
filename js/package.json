@@ -64,7 +64,7 @@
     "testEnvironment": "node"
   },
   "peerDependencies": {
-    "@constl/ipa": "^0.6.7"
+    "@constl/ipa": "^0.8.1"
   },
   "dependencies": {
     "@lassi-js/kili": "^0.2.2",
