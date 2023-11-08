@@ -1,6 +1,6 @@
 {
   "name": "nuchabal",
-  "version": "3.1.4",
+  "version": "3.1.5",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -26,22 +26,22 @@
   },
   "homepage": "https://github.com/julienmalard/nuchabal#readme",
   "devDependencies": {
-    "@constl/ipa": "^0.8.1",
-    "@types/jest": "^29.5.3",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
-    "@typescript-eslint/parser": "^6.4.0",
-    "eslint": "^8.47.0",
+    "@constl/ipa": "^0.9.13",
+    "@types/jest": "^29.5.8",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "eslint": "^8.53.0",
     "eslint-config-prettier": "^9.0.0",
     "genversion": "^3.1.1",
-    "jest": "^29.6.2",
-    "prettier": "^3.0.2",
-    "rimraf": "^5.0.1",
+    "jest": "^29.7.0",
+    "prettier": "^3.0.3",
+    "rimraf": "^5.0.5",
     "ts-jest": "^29.1.1",
     "ts-patch": "^3.0.2",
     "tsconfig-paths": "^4.2.0",
     "tscpaths": "^0.0.9",
     "ttypescript": "^1.5.15",
-    "typescript": "^5.1.6",
+    "typescript": "^5.2.2",
     "typescript-transform-paths": "^3.4.6"
   },
   "jest": {
@@ -67,7 +67,7 @@
     "@constl/ipa": "^0.8.1"
   },
   "dependencies": {
-    "@lassi-js/kili": "^0.2.2",
+    "@lassi-js/kili": "^0.3.2",
     "deepmerge": "^4.3.1",
     "events": "^3.3.0"
   }
