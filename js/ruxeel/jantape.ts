@@ -1,10 +1,11 @@
 export const jaqbälKikajtzïkChabäl = "chab'äl";
 export const jaqbälKikajtzïkTzibanem = "tzib'anem";
 
-export const runukMolajKel = "";
+// K'o chi tiqajal konojel rochochib'äl richin orbit-db
+export const runukMolajKel = "orbitdb/zdpuAqGK5ndjkaYFM5wkyEk4S6FpDH5hvpEWLq79edP9MmMpY";
 
 export const retalTzibNuchabäl =
-  "/orbitdb/zdpuAqGK5ndjkaYFM5wkyEk4S6FpDH5hvpEWLq79edP9MmMpY/c0e399ba-391c-4b85-b69c-7e8fe5eda4a1";
+  "/orbitdb/zdpuAqGK5ndjkaYFM5wkyEk4S6FpDH5hvpEWLq79edP9MmMpY";
 
 // Ch'ab'äl
 export const runukRucheelRunukChabäl = "runukChabäl";
