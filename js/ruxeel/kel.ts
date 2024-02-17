@@ -1,4 +1,4 @@
-import { bds, type générerClient } from "@constl/ipa/";
+import { bds, ClientConstellation } from "@constl/ipa/";
 import { கிளி } from "@lassi-js/kili";
 
 import {
@@ -130,7 +130,7 @@ export type KelChumilTzibanem = கிளி<RucholajEtamabälTzibanem>;
 export const tachojmisajKel = ({
   chumil,
 }: {
-  chumil: ReturnType<typeof générerClient>;
+  chumil: ClientConstellation;
 }): {
   kelChabäl: KelChumilChabäl;
   kelTzibanem: KelChumilTzibanem;

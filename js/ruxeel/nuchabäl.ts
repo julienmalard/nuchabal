@@ -1,4 +1,4 @@
-import type {générerClient} from "@constl/ipa";
+import type {ClientConstellation} from "@constl/ipa";
 import { EventEmitter } from "events";
 import merge from "deepmerge";
 
@@ -37,10 +37,10 @@ export class Nuchabäl {
 
   événements: EventEmitter;
 
-  chumil?: ReturnType<typeof générerClient>;
+  chumil?: ClientConstellation;
   tamestajKel?: types.schémaFonctionOublier;
 
-  constructor({ chumil }: { chumil?: ReturnType<typeof générerClient> }) {
+  constructor({ chumil }: { chumil?: ClientConstellation }) {
     this.chumil = chumil;
     this.retamabälChabälChumil = {};
     this.retamabälTzibanemChumil = {};
