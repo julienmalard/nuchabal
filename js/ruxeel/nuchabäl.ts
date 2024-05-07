@@ -25,8 +25,8 @@ import {
   runukRucheelRutzibTzib,
 } from "@/jantape.js";
 
-import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json" assert { type: "json" };
-import _retamabälTzibanem from "@/retamabäl/tzib'.json" assert { type: "json" };
+import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json" with { type: "json" };
+import _retamabälTzibanem from "@/retamabäl/tzib'.json" with { type: "json" };
 import type {
   types
 } from "@constl/ipa";
