@@ -1,6 +1,6 @@
 {
   "name": "nuchabal",
-  "version": "3.2.2",
+  "version": "3.2.3",
   "description": "",
   "main": "dist/index.js",
   "type": "module",
@@ -64,7 +64,7 @@
     "testEnvironment": "node"
   },
   "peerDependencies": {
-    "@constl/ipa": "^1.0.0"
+    "@constl/ipa": "^1.0.12"
   },
   "dependencies": {
     "@lassi-js/kili": "^0.3.12",
