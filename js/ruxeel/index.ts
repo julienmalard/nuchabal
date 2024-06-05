@@ -1,6 +1,7 @@
 export { version as relesaxïk } from "@/relesaxïk.js";
 export { Nuchabäl } from "@/nuchabäl.js";
-
+export * from '@/kel.js'
+export * from '@/jantape.js'
 /**
  * franc MIT https://github.com/wooorm/franc/blob/main/license
   Cyrillic:
