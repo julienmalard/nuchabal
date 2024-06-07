@@ -7,7 +7,7 @@ import type {
   RubanikilKetamabälTaqChabäl,
   RubanikilKetamabälTaqTzibanem,
 } from "@/rubanikil.js";
-import type { KelChumilChabäl, KelChumilTzibanem } from "@/kel.js";
+import type { KelChumilChabäl, KelChumilTzibanem, RucholajEtamabälChabäl, RucholajEtamabälTzibanem } from "@/kel.js";
 import { tachojmisajKel } from "@/kel.js";
 import {
   runukRucheelRubiChabäl,
@@ -30,6 +30,7 @@ import _retamabälTzibanem from "@/retamabäl/tzib'.json" with { type: "json" };
 import type {
   types
 } from "@constl/ipa";
+import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 
 export class Nuchabäl {
   retamabälChabälChumil: RubanikilKetamabälTaqChabäl;
@@ -38,6 +39,8 @@ export class Nuchabäl {
   événements: EventEmitter;
 
   chumil?: ClientConstellation;
+  kelChabäl?: KelChumilChabäl;
+  kelTzibanem?: KelChumilTzibanem;
   tamestajKel?: types.schémaFonctionOublier;
 
   constructor({ chumil }: { chumil?: ClientConstellation }) {
@@ -55,6 +58,8 @@ export class Nuchabäl {
       const { kelChabäl, kelTzibanem } = tachojmisajKel({
         chumil: this.chumil!,
       });
+      this.kelChabäl = kelChabäl
+      this.kelTzibanem = kelTzibanem
       const tamestajTaqChabäl =
         await kelChabäl.அங்கீகரிக்கப்பட்ட_உறுப்படிகளை_கேள்ளு({
           செ: (retamabälChabäl) => {
@@ -301,6 +306,21 @@ export class Nuchabäl {
     sm: types.schémaFonctionSuivi<string | undefined>;
   }): () => void {
     return this.tatzeqelbej(() => sm(this.rajilanïkTzibanem({ runuk })));
+  }
+
+  async tachilabejTzibanem(tzib: RucholajEtamabälTzibanem) {
+    return await this.kelTzibanem?.பரிந்துரையு({பரிந்துரை: tzib});
+  }
+  
+  async takulTzibanem(chilaben: பிணையம்_பரிந்துரை<RucholajEtamabälTzibanem>) {
+    return await this.kelTzibanem?.அங்கீகரி({பரிந்துரை: chilaben})
+  }
+
+  async tachilabejChabäl(tzib: RucholajEtamabälChabäl) {
+    return await this.kelChabäl?.பரிந்துரையு({பரிந்துரை: tzib});
+  }
+  async takulChabäl(chilaben: பிணையம்_பரிந்துரை<RucholajEtamabälChabäl>) {
+    return await this.kelChabäl?.அங்கீகரி({பரிந்துரை: chilaben})
   }
 
   async tatzapij(): Promise<void> {
