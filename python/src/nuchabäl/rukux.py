@@ -35,7 +35,7 @@ class Nuchabäl(object):
 
     def runukChabäl(ri, chabäl: str, runukulem: Optional[str]) -> Optional[str]:
         try:
-            rnkNchbl = next(rnk for rnk in ri.retamabälChabäl.keys() if ri.retamabälTzibanem[rnk]["rb'"] == chabäl)
+            rnkNchbl = next(rnk for rnk in ri.retamabälChabäl.keys() if ri.retamabälChabäl[rnk]["rb'"] == chabäl)
         except StopIteration:
             return
 
