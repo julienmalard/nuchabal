@@ -21,7 +21,7 @@ class Nuchabäl(object):
     }
 
     def __init__(ri, rujaloxïk: Optional[Rujaloxïk] = None):
-        cholajibäl_retamabäl = resources.files("retamabäl")
+        cholajibäl_retamabäl = resources.files("nuchabäl.retamabäl")
         ri.retamabälChabäl = _rujaqik_json(cholajibäl_retamabäl.joinpath("ch'ab'äl.json"))
         ri.retamabälTzibanem = _rujaqik_json(cholajibäl_retamabäl.joinpath("tzib'.json"))
 
