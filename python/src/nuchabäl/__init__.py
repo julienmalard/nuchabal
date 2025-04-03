@@ -1,1 +1,1 @@
-from .rukux import Wuj, chijun
+from .rukux import Nuchabäl

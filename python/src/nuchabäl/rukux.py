@@ -1,9 +1,10 @@
 import json
 import os
 import unicodedata
+from importlib import resources
 from typing import Optional
 
-from rujaloxïk import Rujaloxïk
+from .rujaloxïk import Rujaloxïk
 
 
 def _rujaqik_json(wuj):
@@ -20,8 +21,9 @@ class Nuchabäl(object):
     }
 
     def __init__(ri, rujaloxïk: Optional[Rujaloxïk] = None):
-        ri.retamabälChabäl = _rujaqik_json(os.path.join(os.path.split(__file__)[0], "../../retamabäl/ch'ab'äl.json"))
-        ri.retamabälTzibanem = _rujaqik_json(os.path.join(os.path.split(__file__)[0], "../../retamabäl/tz'ib'.json"))
+        cholajibäl_retamabäl = resources.files("retamabäl")
+        ri.retamabälChabäl = _rujaqik_json(cholajibäl_retamabäl.joinpath("ch'ab'äl.json"))
+        ri.retamabälTzibanem = _rujaqik_json(cholajibäl_retamabäl.joinpath("tzib'.json"))
 
         ri.rujaloxïk = rujaloxïk
 

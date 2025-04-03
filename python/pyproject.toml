@@ -27,7 +27,9 @@ distribution = true
 includes = ["src/nuchabäl"]
 
 [tool.pdm.scripts]
-mlk = "rm -r -f \"src/nuchabäl/retamabäl\" && cp -R \"../retamabäl\" \"src/nuchabäl\" && pdm run install"
+suunik = "rm -r -f src/nuchabäl/retamabäl"
+wach = "cp -R ../retamabäl src/nuchabäl"
+molik = { composite = ["suunik", "wach"] }
 tjt = "pdm run pytest"
 cov = "pdm run coverage run -m pytest rutojtobenïk -k tjt_*.py"
 
