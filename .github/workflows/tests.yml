@@ -31,12 +31,12 @@ jobs:
           cache: true
 
       - name: Runimonem
-        run: pdm molik && pdm install
+        run: cd python && pdm molik && pdm install
 
       - name: Rutojtob'enïk
-        run: pdm cov && pdm run coverage xml
+        run: cd python && pdm cov && pdm run coverage xml
 
       - name: Tataqa' pa Codecov
-        uses: codecov/codecov-action@v5
+        uses: cd python && codecov/codecov-action@v5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
