@@ -75,7 +75,7 @@ class Nuchabäl(object):
                 return rtmbl["tz"]
 
     def rajilanïkChabäl(ri, runuk: str) -> Optional[str]:
-        if runuk in ri.runukChabäl:
+        if runuk in ri.retamabälChabäl:
             rtmbl = ri.retamabälChabäl[runuk]
             if "aj" in rtmbl:
                 return rtmbl["aj"]
