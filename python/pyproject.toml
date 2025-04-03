@@ -1,6 +1,6 @@
 [project]
 name = "nuchabal"
-version = "0.1.1"
+version = "0.1.2"
 description = "Kinuk' ri taq chab'äl pa ri xekaj wachulew"
 authors = [
     {name = "Julien Jean Malard-Adam", email = "julien.malard@mail.mcgill.ca"},
