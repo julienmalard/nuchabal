@@ -29,6 +29,8 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           cache: true
+          cache-dependency-path: |
+            ./python/pdm.lock
 
       - name: Runimonem
         run: cd python && pdm molik && pdm install

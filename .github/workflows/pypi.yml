@@ -19,6 +19,8 @@ jobs:
         uses: pdm-project/setup-pdm@v4
         with:
           cache: true
+          cache-dependency-path: |
+            ./python/pdm.lock
 
       - name: Publier sur PyPI
         run: cd python && pdm publish
