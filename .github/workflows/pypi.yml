@@ -23,4 +23,4 @@ jobs:
             ./python/pdm.lock
 
       - name: Publier sur PyPI
-        run: cd python && pdm publish
+        run: cd python && pdm molik && pdm publish
