@@ -1,0 +1,39 @@
+name: Nuch'ab'äl pa Python
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - master
+      - 'renovate/**'
+    paths-ignore:
+      - '.github/**'
+      - '!.github/workflows/ic.yml'
+      - '!.github/workflows/pypi.yml'
+      - '!.github/workflows/tests.yml'
+      - '**.md'
+      - .editorconfig
+      - .gitignore
+      - '.idea/**'
+      - '.vscode/**'
+  pull_request:
+    paths-ignore:
+      - '.github/**'
+      - '!.github/workflows/ic.yml'
+      - '!.github/workflows/pypi.yml'
+      - '!.github/workflows/tests.yml'
+      - '**.md'
+      - .editorconfig
+      - .gitignore
+      - '.idea/**'
+      - '.vscode/**'
+
+concurrency:
+  group: ic-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  tests:
+    uses: ./.github/workflows/tests.yml

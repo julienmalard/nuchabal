@@ -31,7 +31,7 @@ suunik = "rm -r -f src/nuchabäl/retamabäl"
 wach = "cp -R ../retamabäl src/nuchabäl"
 molik = { composite = ["suunik", "wach"] }
 tjt = "pdm run pytest"
-cov = "pdm run coverage run -m pytest rutojtobenïk -k tjt_*.py"
+cov = "pdm run coverage run -m pytest"
 
 [tool.pytest.ini_options]
 python_files = "tjt_*.py"
