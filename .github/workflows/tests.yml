@@ -39,6 +39,6 @@ jobs:
         run: cd python && pdm cov && pdm run coverage xml
 
       - name: Tataqa' pa Codecov
-        uses: cd python && codecov/codecov-action@v5
+        uses: codecov/codecov-action@v5
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
