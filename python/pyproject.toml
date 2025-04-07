@@ -28,8 +28,8 @@ package-dir = "ruxeel"
 includes = ["ruxeel/nuchabäl"]
 
 [tool.pdm.scripts]
-suunik = "rm -r -f src/nuchabäl/retamabäl"
-wach = "cp -R ../retamabäl src/nuchabäl"
+suunik = "rm -r -f ruxeel/nuchabäl/retamabäl"
+wach = "cp -R ../retamabäl ruxeel/nuchabäl"
 molik = { composite = ["suunik", "wach"] }
 tjt = "pdm run pytest"
 cov = "pdm run coverage run -m pytest"
