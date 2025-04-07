@@ -24,7 +24,8 @@ dev = [
 distribution = true
 
 [tool.pdm.build]
-includes = ["src/nuchabäl"]
+package-dir = "ruxeel"
+includes = ["ruxeel/nuchabäl"]
 
 [tool.pdm.scripts]
 suunik = "rm -r -f src/nuchabäl/retamabäl"
