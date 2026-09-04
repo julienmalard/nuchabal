@@ -1,4 +1,4 @@
-import { bds, ClientConstellation } from "@constl/ipa/";
+import type { bds, Constellation } from "@constl/ipa/";
 import { கிளி } from "@lassi-js/kili";
 
 import {
@@ -130,7 +130,7 @@ export type KelChumilTzibanem = கிளி<RucholajEtamabälTzibanem>;
 export const tachojmisajKel = ({
   chumil,
 }: {
-  chumil: ClientConstellation;
+  chumil: Constellation;
 }): {
   kelChabäl: KelChumilChabäl;
   kelTzibanem: KelChumilTzibanem;

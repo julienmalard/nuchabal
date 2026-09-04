@@ -1,4 +1,4 @@
-import type {ClientConstellation} from "@constl/ipa";
+import type { Constellation } from "@constl/ipa";
 import { EventEmitter } from "events";
 import merge from "deepmerge";
 
@@ -7,7 +7,12 @@ import type {
   RubanikilKetamabälTaqChabäl,
   RubanikilKetamabälTaqTzibanem,
 } from "@/rubanikil.js";
-import type { KelChumilChabäl, KelChumilTzibanem, RucholajEtamabälChabäl, RucholajEtamabälTzibanem } from "@/kel.js";
+import type {
+  KelChumilChabäl,
+  KelChumilTzibanem,
+  RucholajEtamabälChabäl,
+  RucholajEtamabälTzibanem,
+} from "@/kel.js";
 import { tachojmisajKel } from "@/kel.js";
 import {
   runukRucheelRubiChabäl,
@@ -27,10 +32,8 @@ import {
 
 import _retamabälChabäl from "@/retamabäl/ch'ab'äl.json" with { type: "json" };
 import _retamabälTzibanem from "@/retamabäl/tzib'.json" with { type: "json" };
-import type {
-  types
-} from "@constl/ipa";
-import { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
+import type { types } from "@constl/ipa";
+import type { பிணையம்_பரிந்துரை } from "@lassi-js/kili";
 
 export class Nuchabäl {
   retamabälChabälChumil: RubanikilKetamabälTaqChabäl;
@@ -38,18 +41,18 @@ export class Nuchabäl {
 
   événements: EventEmitter;
 
-  chumil?: ClientConstellation;
+  chumil?: Constellation;
   kelChabäl?: KelChumilChabäl;
   kelTzibanem?: KelChumilTzibanem;
   tamestajKel?: types.schémaFonctionOublier;
 
-  constructor({ chumil }: { chumil?: ClientConstellation }) {
+  constructor({ chumil }: { chumil?: Constellation }) {
     this.chumil = chumil;
     this.retamabälChabälChumil = {};
     this.retamabälTzibanemChumil = {};
 
     this.événements = new EventEmitter();
-    
+
     this._tachojmisajKel();
   }
 
@@ -58,8 +61,8 @@ export class Nuchabäl {
       const { kelChabäl, kelTzibanem } = tachojmisajKel({
         chumil: this.chumil!,
       });
-      this.kelChabäl = kelChabäl
-      this.kelTzibanem = kelTzibanem
+      this.kelChabäl = kelChabäl;
+      this.kelTzibanem = kelTzibanem;
       const tamestajTaqChabäl =
         await kelChabäl.அங்கீகரிக்கப்பட்ட_உறுப்படிகளை_கேள்ளு({
           செ: (retamabälChabäl) => {
@@ -110,8 +113,8 @@ export class Nuchabäl {
     runukulem?: string;
   }): string | undefined {
     const rnkNchbl = Object.keys(this.retamabälChabäl).find(
-      (x) => this.retamabälChabäl[x]["rb'"] === chabäl
-      );
+      (x) => this.retamabälChabäl[x]["rb'"] === chabäl,
+    );
     if (!runukulem || !rnkNchbl) return rnkNchbl;
 
     runukulem = runukulem.toLowerCase();
@@ -135,11 +138,11 @@ export class Nuchabäl {
       rtmbl = this.retamabälChabäl[runuk];
     } else if (runukulem_kokol === "iso") {
       rtmbl = Object.values(this.retamabälChabäl).find((x) =>
-      [x.rn.i1, x.rn.i2, x.rn.i3].some((x) => x === runuk)
+        [x.rn.i1, x.rn.i2, x.rn.i3].some((x) => x === runuk),
       );
     } else if (Object.keys(rkxnkNklm).includes(runukulem_kokol)) {
       rtmbl = Object.values(this.retamabälChabäl).find(
-        (x) => x.rn[rkxnkNklm[runukulem_kokol]] === runuk
+        (x) => x.rn[rkxnkNklm[runukulem_kokol]] === runuk,
       );
     }
     return rtmbl ? rtmbl["rb'"] : undefined;
@@ -148,13 +151,13 @@ export class Nuchabäl {
   rutzibanemChabäl({ runuk }: { runuk: string }): string | undefined {
     const rtmbl = this.retamabälChabäl[runuk];
     const tzib = rtmbl?.tz;
-    
+
     if (tzib) return tzib;
 
     for (const tz in this.konojelTzibanem) {
-      const rutzibTzibanem = this.rutzibTzibanem({runuk: tz})
+      const rutzibTzibanem = this.rutzibTzibanem({ runuk: tz });
       if (rutzibTzibanem && runuk.match(new RegExp(rutzibTzibanem, "g"))) {
-        return tz
+        return tz;
       }
     }
     return undefined;
@@ -164,7 +167,7 @@ export class Nuchabäl {
     const rtmbl = this.retamabälChabäl[runuk];
     if (rtmbl) return rtmbl.aj;
     const tzib = this.rutzibanemChabäl({ runuk });
-    return tzib ? this.rajilanïkTzibanem({runuk: tzib}) : undefined;
+    return tzib ? this.rajilanïkTzibanem({ runuk: tzib }) : undefined;
   }
 
   rubiTzibanem({ runuk }: { runuk: string }): string | undefined {
@@ -172,9 +175,9 @@ export class Nuchabäl {
     return rtmbl ? rtmbl["rb'"] : undefined;
   }
 
-  runukTzibanem({ tzibanem }: { tzibanem: string}): string | undefined {
+  runukTzibanem({ tzibanem }: { tzibanem: string }): string | undefined {
     return Object.keys(this.retamabälTzibanem).find(
-      (x) => this.retamabälChabäl[x]["rb'"] === tzibanem
+      (x) => this.retamabälChabäl[x]["rb'"] === tzibanem,
     );
   }
 
@@ -309,18 +312,18 @@ export class Nuchabäl {
   }
 
   async tachilabejTzibanem(tzib: RucholajEtamabälTzibanem) {
-    return await this.kelTzibanem?.பரிந்துரையு({பரிந்துரை: tzib});
+    return await this.kelTzibanem?.பரிந்துரையு({ பரிந்துரை: tzib });
   }
-  
+
   async takulTzibanem(chilaben: பிணையம்_பரிந்துரை<RucholajEtamabälTzibanem>) {
-    return await this.kelTzibanem?.அங்கீகரி({பரிந்துரை: chilaben})
+    return await this.kelTzibanem?.அங்கீகரி({ பரிந்துரை: chilaben });
   }
 
   async tachilabejChabäl(tzib: RucholajEtamabälChabäl) {
-    return await this.kelChabäl?.பரிந்துரையு({பரிந்துரை: tzib});
+    return await this.kelChabäl?.பரிந்துரையு({ பரிந்துரை: tzib });
   }
   async takulChabäl(chilaben: பிணையம்_பரிந்துரை<RucholajEtamabälChabäl>) {
-    return await this.kelChabäl?.அங்கீகரி({பரிந்துரை: chilaben})
+    return await this.kelChabäl?.அங்கீகரி({ பரிந்துரை: chilaben });
   }
 
   async tatzapij(): Promise<void> {
@@ -338,7 +341,7 @@ const rkxnkNklm: { [rnk: string]: string } = {
 const tajalPaRubanikilRetamabalChabäl = (
   relesaxïkRuxeelTzijChabäl: Parameters<
     Parameters<KelChumilChabäl["அங்கீகரிக்கப்பட்ட_உறுப்படிகளை_கேள்ளு"]>[0]["செ"]
-  >[0]
+  >[0],
 ): RubanikilKetamabälTaqChabäl => {
   const retamabäl: RubanikilKetamabälTaqChabäl = {};
 
@@ -364,7 +367,7 @@ const tajalPaRubanikilRetamabalTzibanem = (
     Parameters<
       KelChumilTzibanem["அங்கீகரிக்கப்பட்ட_உறுப்படிகளை_கேள்ளு"]
     >[0]["செ"]
-  >[0]
+  >[0],
 ): RubanikilKetamabälTaqTzibanem => {
   const retamabäl: RubanikilKetamabälTaqTzibanem = {};
 

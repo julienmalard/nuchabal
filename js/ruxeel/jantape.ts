@@ -2,7 +2,7 @@ export const jaqbälKikajtzïkChabäl = "chab'äl";
 export const jaqbälKikajtzïkTzibanem = "tzib'anem";
 
 // K'o chi tiqajal konojel rochochib'äl richin orbit-db
-export const runukMolajKel = 
+export const runukMolajKel =
   "/orbitdb/zdpuB2ZNKMRPnn8kwwL9UDY6VNdXxqxTUiEanjJ4Z6HuxEgWU";
 
 export const retalTzibNuchabäl =
